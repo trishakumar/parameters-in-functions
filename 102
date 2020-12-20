@@ -1,0 +1,51 @@
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin(9600);
+}
+
+void loop() {
+float a;
+float b;
+float c;
+float d;
+float e;
+float f;
+  // put your main code here, to run repeatedly:
+Serial.println("Please enter your first number");
+while(Serial.available()==0)
+{
+  
+}
+a = Serial.parseFloat();
+
+Serial.println("Please enter your second number");
+while(Serial.available()==0)
+{
+  
+}
+b = Serial.parseFloat();
+
+
+tally(a,b,c,d,e,f);
+Serial.print("The sum of your numbers is = ");
+Serial.println(c);
+Serial.print("The difference of your numbers is = ");
+Serial.println(d);
+Serial.print("The product of your numbers is = ");
+Serial.println(e);
+Serial.print("The quotient of your numbers is = ");
+Serial.println(f);
+
+}
+void tally(float first, float second, float &sum, float &difference, float &multi, float &divi)
+{
+  sum = first + second;
+  difference = first - second;
+  multi = first * second;
+  divi = first / divi;
+  Serial.println(sum);
+  Serial.println(difference);
+  Serial.println(multi);
+  Serial.println(divi);
+  
+}
