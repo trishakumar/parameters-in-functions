@@ -1,0 +1,39 @@
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin(9600);
+}
+
+void loop() {
+float a;
+float b;
+float c;
+float d;
+  // put your main code here, to run repeatedly:
+Serial.println("Please enter your first number");
+while(Serial.available()==0)
+{
+  
+}
+a = Serial.parseFloat();
+
+Serial.println("Please enter your second number");
+while(Serial.available()==0)
+{
+  
+}
+b = Serial.parseFloat();
+
+
+tally(a,b,c,d);
+Serial.print("The sum of your numbers is = ");
+Serial.println(c);
+Serial.print("The difference of your numbers is = ");
+Serial.println(d);
+}
+void tally(float first, float second, float &sum, float &difference)
+{
+  sum = first + second;
+  difference = first - second;
+  Serial.println(sum);
+  Serial.println(difference);
+}
